@@ -1,0 +1,32 @@
+### WelcomeMessage Tests
+
+@baseUrl = http://localhost:7071
+@functionKey = ABC123
+@name = Jimmy
+
+###
+GET {{baseUrl}}/api/WelcomeMessage
+x-functions-key: {{functionKey}}
+
+### 
+GET {{baseUrl}}/api/WelcomeMessage?name={{name}}
+x-functions-key: {{functionKey}}
+
+### Test POST request with no body
+POST {{baseUrl}}/api/WelcomeMessage
+x-functions-key: {{functionKey}}
+Content-Type: text/plain
+
+### Test POST request with name in body
+POST {{baseUrl}}/api/WelcomeMessage
+x-functions-key: {{functionKey}}
+Content-Type: text/plain
+
+{{name}}
+
+### Test GET request with querystring and body
+GET {{baseUrl}}/api/WelcomeMessage?name={{name}}
+x-functions-key: {{functionKey}}
+Content-Type: application/json
+
+Oops
