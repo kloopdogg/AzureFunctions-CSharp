@@ -1,10 +1,3 @@
-using System;
-using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker.Http;
 
 namespace SampleFunctionApp.Tests.Fakes;

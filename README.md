@@ -6,10 +6,6 @@ Sample Azure Functions v4 project with C# (Isolated Worker Model)
 The recommended folder structure for a C# Azure Functions v4 application using the isolated worker model:
 ```text
 <project_root>/
-├── docs/
-│   ├── architecture.md
-│   ├── api-contract.md
-│   └── troubleshooting.md
 ├── src/
 │   ├── FunctionApp/
 │   │   ├── Functions/

@@ -85,7 +85,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(_fakeRequestData);
+        var response = await functions.WelcomeMessage(_fakeRequestData, _mockFunctionContext.Object);
 
         // Assert
         VerifyLog(LogLevel.Information, expectedLogMessage);
@@ -105,7 +105,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithNameQueryString);
+        var response = await functions.WelcomeMessage(requestWithNameQueryString, _mockFunctionContext.Object);
 
         // Assert
         VerifyLog(LogLevel.Information, expectedLogMessage);
@@ -120,7 +120,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(_fakeRequestData);
+        var response = await functions.WelcomeMessage(_fakeRequestData, _mockFunctionContext.Object);
 
         // Assert
         Assert.AreEqual(expectedStatusCode, response.StatusCode);
@@ -144,7 +144,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithNameQueryString);
+        var response = await functions.WelcomeMessage(requestWithNameQueryString, _mockFunctionContext.Object);
 
         // Assert
         Assert.AreEqual(expectedStatusCode, response.StatusCode);
@@ -167,7 +167,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithNameQueryString);
+        var response = await functions.WelcomeMessage(requestWithNameQueryString, _mockFunctionContext.Object);
 
         // Assert
         VerifyLog(LogLevel.Information, expectedLogMessage);
@@ -189,7 +189,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithBody);
+        var response = await functions.WelcomeMessage(requestWithBody, _mockFunctionContext.Object);
 
         // Assert
         VerifyLog(LogLevel.Information, expectedLogMessage);
@@ -210,7 +210,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithBody);
+        var response = await functions.WelcomeMessage(requestWithBody, _mockFunctionContext.Object);
 
         // Assert
         Assert.AreEqual(expectedStatusCode, response.StatusCode);
@@ -236,7 +236,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithNameQueryString);
+        var response = await functions.WelcomeMessage(requestWithNameQueryString, _mockFunctionContext.Object);
 
         // Assert
         Assert.AreEqual(expectedStatusCode, response.StatusCode);
@@ -261,7 +261,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithBody);
+        var response = await functions.WelcomeMessage(requestWithBody, _mockFunctionContext.Object);
 
         // Assert
         Assert.AreEqual(expectedStatusCode, response.StatusCode);
@@ -287,7 +287,7 @@ public sealed class SampleHttpFunctionsTests
 
         // Act
         SampleHttpFunctions functions = CreateFunctions();
-        var response = await functions.WelcomeMessage(requestWithBody);
+        var response = await functions.WelcomeMessage(requestWithBody, _mockFunctionContext.Object);
 
         // Assert
         Assert.AreEqual(expectedStatusCode, response.StatusCode);

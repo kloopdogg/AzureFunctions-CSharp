@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0">
+        <Configuration>
+          <CodeCoverage>
+            <!-- Exclude the specified files and folders -->
+            <ExcludeByFile>
+              <!-- Exclude the obj folder -->
+              <File>**/src/SampleFunctionApp/obj/**</File>
+            </ExcludeByFile>
+            <ModulePaths>
+              <Include>
+                <ModulePath>.*\.dll$</ModulePath>
+                <ModulePath>.*\.exe$</ModulePath>
+              </Include>
+              <Exclude>
+                <ModulePath>.*\\*\.Tests.dll$</ModulePath>
+              </Exclude>
+            </ModulePaths>
+            <Functions>
+              <Exclude>
+                <Function>^Microsoft.*</Function>
+                <Function>^System.*</Function>
+                <Function>^SampleFunctionApp\.Utils.*</Function>
+              </Exclude>
+            </Functions>
+            <Attributes>
+              <Exclude>
+                <Source>^System\.Diagnostics\.DebuggerHiddenAttribute$</Source>
+              </Exclude>
+            </Attributes>
+            <Sources>
+              <Exclude>
+                <Source>.*\\obj\\.*</Source>
+                <Source>.*src/SampleFunctionApp/Program.cs</Source>
+              </Exclude>
+            </Sources>
+          </CodeCoverage>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
