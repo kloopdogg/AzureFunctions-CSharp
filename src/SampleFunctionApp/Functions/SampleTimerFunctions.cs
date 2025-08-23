@@ -7,7 +7,7 @@ namespace SampleFunctionApp.Functions;
 public class SampleTimerFunctions(ILogger<SampleTimerFunctions> _logger, ITimeProvider _timeProvider)
 {
     [Function("ScheduledWork")]
-    public async Task ScheduledWork([TimerTrigger("0 */5 * * * *", RunOnStartup = true, UseMonitor = false)] TimerInfo timerInfo,
+    public async Task ScheduledWork([TimerTrigger("0 */5 * * * *", RunOnStartup = true)] TimerInfo timerInfo,
         FunctionContext context)
     {
         var utcTimestamp = _timeProvider.UtcNow.ToString("O");
