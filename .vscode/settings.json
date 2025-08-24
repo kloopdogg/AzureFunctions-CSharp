@@ -1,8 +1,9 @@
 {
-    "azureFunctions.deploySubpath": "src/bin/Release/net9.0/publish",
+    "azureFunctions.deploySubpath": "src/SampleFunctionApp/bin/Release/net9.0/publish",
+    "azureFunctions.preDeployTask": "publish (functions)",
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~4",
+    "azureFunctions.projectSubpath": "src/SampleFunctionApp/bin/Debug/net9.0",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "publish (functions)",
     "dotnet.unitTests.runSettingsPath": "./CodeCoverage.runsettings",
 }

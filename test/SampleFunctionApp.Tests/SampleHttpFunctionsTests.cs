@@ -1,10 +1,7 @@
 ﻿using Moq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
-using System.Threading.Tasks;
 using SampleFunctionApp.Functions;
 using Microsoft.Extensions.Logging;
-using Microsoft.Azure.Functions.Worker.Http;
 using SampleFunctionApp.Tests.Fakes;
 using Microsoft.Azure.Functions.Worker;
 using Azure.Core.Serialization;
